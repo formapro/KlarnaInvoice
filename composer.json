@@ -1,0 +1,14 @@
+{
+    "name": "klarna/invoice",
+    "description": "Wrapper for the Klarna Invoice API",
+    "homepage": "http://developers.klarna.com",
+    "license": "Apache-2.0",
+    "type": "library",
+    "require": {
+        "php": ">=5.2.16",
+        "phpxmlrpc/phpxmlrpc": "~3.0"
+    },
+    "autoload": {
+        "classmap": ["./"]
+    }
+}
