@@ -9,6 +9,6 @@
         "phpxmlrpc/phpxmlrpc": "~3.0"
     },
     "autoload": {
-        "classmap": ["./"]
+        "files": ["Klarna.php"]
     }
 }
