@@ -1,5 +1,5 @@
 {
-    "name": "klarna/invoice",
+    "name": "fp/klarna-invoice",
     "description": "Wrapper for the Klarna Invoice API",
     "homepage": "http://developers.klarna.com",
     "license": "Apache-2.0",
