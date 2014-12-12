@@ -1,6 +1,6 @@
 {
     "name": "fp/klarna-invoice",
-    "description": "Wrapper for the Klarna Invoice API",
+    "description": "It unofficial repo of Klarna Invoice service with Composer added. We use it with https://github.com/Payum/KlarnaInvoice",
     "homepage": "http://developers.klarna.com",
     "license": "Apache-2.0",
     "type": "library",
