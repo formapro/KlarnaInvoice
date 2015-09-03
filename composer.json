@@ -6,7 +6,7 @@
     "type": "library",
     "require": {
         "php": ">=5.2.16",
-        "phpxmlrpc/phpxmlrpc": "~3.0"
+        "phpxmlrpc/phpxmlrpc": "~3.0,~4.0"
     },
     "autoload": {
         "files": ["Klarna.php"]
