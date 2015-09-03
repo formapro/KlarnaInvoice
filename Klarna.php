@@ -3637,7 +3637,10 @@ class Klarna
             $status = $xmlrpcresp->faultCode();
 
             if ($status !== 0) {
-                throw new KlarnaException($xmlrpcresp->faultString(), $status);
+                // fix segfault on php5.6, most likely this one https://bugs.php.net/bug.php?id=68166
+                $faultString = utf8_encode($xmlrpcresp->faultString());
+
+                throw new KlarnaException($faultString, $status);
             }
 
             return php_xmlrpc_decode($xmlrpcresp->value());
