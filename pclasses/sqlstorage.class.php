@@ -315,7 +315,7 @@ SQL;
             $this->pdo->exec($sql);
         } catch (PDOException $e) {
             throw new Klarna_DatabaseException(
-                'Table non-existant, failed to create it!'
+                'Table non-existent, failed to create it!'
             );
         }
     }

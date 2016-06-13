@@ -2030,7 +2030,7 @@ class Klarna
      * @param string  $rno   Reservation number
      * @param boolean $clear clear set data aftre updating. Defaulted to true.
      *
-     * @throws KlarnaException if no RNO is given, or if an error is recieved
+     * @throws KlarnaException if no RNO is given, or if an error is received
      *         from Klarna Online.
      *
      * @return true if the update was successful
@@ -2156,7 +2156,7 @@ class Klarna
      * @param boolean $clear clear set data after activating. Defaulted to true.
      *
      * @throws KlarnaException when the RNO is not specified, or if an error
-     *         is recieved from Klarna Online.
+     *         is received from Klarna Online.
      * @return A string array with risk status and reservation number.
      */
     public function activate(
