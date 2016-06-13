@@ -77,7 +77,7 @@ class KlarnaFlags
      * A code which indicates that all first names should be returned with the
      * address.
      *
-     * Formerly refered to as GA_OLD.
+     * Formerly referred to as GA_OLD.
      *
      * @var int
      */

@@ -1393,7 +1393,7 @@
 			}
 			else
 			{
-				// reset errno and errstr on succesful socket connection
+				// reset errno and errstr on successful socket connection
 				$this->errstr = '';
 			}
 			// G. Giunta 2005/10/24: close socket before parsing.

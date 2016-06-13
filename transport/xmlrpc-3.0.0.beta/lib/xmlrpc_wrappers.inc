@@ -494,7 +494,7 @@
     * @return array or false on failure
     *
     * @todo get_class_methods will return both static and non-static methods.
-    *       we have to differentiate the action, depending on wheter we recived a class name or object
+    *       we have to differentiate the action, depending on wheter we received a class name or object
     */
     function wrap_php_class($classname, $extra_options=array())
     {

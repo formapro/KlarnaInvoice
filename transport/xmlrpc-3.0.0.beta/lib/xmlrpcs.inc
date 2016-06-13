@@ -496,7 +496,7 @@
 
 		/**
 		* @param array $dispmap the dispatch map withd efinition of exposed services
-		* @param boolean $servicenow set to false to prevent the server from runnung upon construction
+		* @param boolean $servicenow set to false to prevent the server from running upon construction
 		*/
 		function xmlrpc_server($dispMap=null, $serviceNow=true)
 		{
