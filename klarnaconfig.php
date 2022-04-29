@@ -45,29 +45,24 @@
  */
 class KlarnaConfig implements ArrayAccess
 {
-
     /**
      * An array containing all the options for this config.
      *
      * @ignore Do not show in PHPDoc.
-     * @var array
      */
-    protected $options;
+    protected mixed $options;
 
     /**
      * If set to true, saves the config.
-     *
-     * @var bool
      */
-    public static $store = true;
+    public static bool $store = true;
 
     /**
      * URI to the config file.
      *
      * @ignore Do not show in PHPDoc.
-     * @var string
      */
-    protected $file;
+    protected string $file;
 
     /**
      * Class constructor
@@ -75,9 +70,9 @@ class KlarnaConfig implements ArrayAccess
      * Loads specified file, or default file,
      * if {@link KlarnaConfig::$store} is set to true.
      *
-     * @param string $file URI to config file, e.g. ./config.json
+     * @param string|null $file URI to config file, e.g. ./config.json
      */
-    public function __construct($file = null)
+    public function __construct(string $file = null)
     {
         $this->options = array();
         if ($file) {
@@ -94,10 +89,8 @@ class KlarnaConfig implements ArrayAccess
 
     /**
      * Clears the config.
-     *
-     * @return void
      */
-    public function clear()
+    public function clear(): void
     {
         $this->options = array();
     }
@@ -112,7 +105,7 @@ class KlarnaConfig implements ArrayAccess
     {
         if (self::$store && $this->file) {
             if ((!file_exists($this->file)
-                && is_writable(dirname($this->file)))
+                    && is_writable(dirname($this->file)))
                 || is_writable($this->file)
             ) {
                 file_put_contents($this->file, json_encode($this->options));
@@ -122,24 +115,16 @@ class KlarnaConfig implements ArrayAccess
 
     /**
      * Returns true whether the field exists.
-     *
-     * @param mixed $offset field
-     *
-     * @return bool
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->options[$offset]);
     }
 
     /**
      * Used to get the value of a field.
-     *
-     * @param mixed $offset field
-     *
-     * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
         if (!$this->offsetExists($offset)) {
             return null;
@@ -149,25 +134,16 @@ class KlarnaConfig implements ArrayAccess
 
     /**
      * Used to set a value to a field.
-     *
-     * @param mixed $offset field
-     * @param mixed $value  value
-     *
-     * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
         $this->options[$offset] = $value;
     }
 
     /**
      * Removes the specified field.
-     *
-     * @param mixed $offset field
-     *
-     * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->options[$offset]);
     }

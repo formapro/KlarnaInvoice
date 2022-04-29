@@ -1,12 +1,12 @@
 {
     "name": "fp/klarna-invoice",
     "description": "It unofficial repo of Klarna Invoice service with Composer added. We use it with https://github.com/Payum/KlarnaInvoice",
-    "homepage": "http://developers.klarna.com",
+    "homepage": "https://docs.klarna.com",
     "license": "Apache-2.0",
     "type": "library",
     "require": {
-        "php": ">=5.2.16",
-        "phpxmlrpc/phpxmlrpc": "~3.0|~4.0"
+        "php": ">=8.0.2",
+        "phpxmlrpc/phpxmlrpc": "~4.0"
     },
     "autoload": {
         "files": ["Klarna.php"]
