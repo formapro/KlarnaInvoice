@@ -126,7 +126,9 @@ class KlarnaConfig implements ArrayAccess
      * @param mixed $offset field
      *
      * @return bool
+     *
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->options[$offset]);
@@ -139,6 +141,7 @@ class KlarnaConfig implements ArrayAccess
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         if (!$this->offsetExists($offset)) {
@@ -155,6 +158,7 @@ class KlarnaConfig implements ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         $this->options[$offset] = $value;
@@ -167,6 +171,7 @@ class KlarnaConfig implements ArrayAccess
      *
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->options[$offset]);
